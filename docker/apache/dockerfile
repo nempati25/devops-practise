@@ -1,6 +1,7 @@
 FROM ubuntu
 MAINTAINER Praveen
 RUN apt update &&\
-    apt install apache2
+    apt install apache2 -y
+#asked for selecting country and timezone
 CMD ["echo" "helloworlds"]
 EXPOSE 8080
