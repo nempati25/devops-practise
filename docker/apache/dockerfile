@@ -1,0 +1,6 @@
+FROM ubuntu
+MAINTAINER Praveen
+RUN apt update &&\
+    apt install apache2
+CMD ["echo" "helloworlds"]
+EXPOSE 8080
