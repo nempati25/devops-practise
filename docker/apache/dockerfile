@@ -19,10 +19,5 @@ RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
     apt-get update && \
     apt-get install -y tzdata
 
-
-RUN sudo apt-get install php libapache2-mod-php -y
-RUN rm -rf /var/www/html/
-COPY . /var/www/html/
-WORKDIR /var/www/html/
 EXPOSE 80
 CMD systemctl restart apache2
